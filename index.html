@@ -3,52 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <title>我的个人网页</title>
+
+
   <style>
     body {
+      background-image: url('2.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
       font-family: "Microsoft YaHei", sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      color: white;
+    }
+    /* 使用 Flexbox 创建分栏布局 */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;  /* 左右分配空间 */
+      align-items: flex-start;  /* 垂直对齐 */
+      padding: 20px;
+    }
+
+    /* 左侧栏样式 */
+    .left-column {
+      width: 48%;  /* 设置宽度为 48% 来创建两栏 */
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* 右侧栏样式 */
+    .right-column {
+      width: 48%;  /* 设置宽度为 48% 来创建两栏 */
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    /* 设置图片的显示方式 */
+    .left-column img,
+    .right-column img {
+      width: 100%;
+      height: auto;
+	  max-width:600px;
+	  max-height:400px；
+      border-radius: 10px;
+    }
+    h1
+	{
+	font-size:60px;
+	text-align:center;
+	color: white
+	}
+    h2 {
+      color: white;
+	  font-size：60px;
+    }
+    ul {
+	font-size:30px;
+	line-height:1.6;
+	}
+	li {
+		margin-bottom:30px;
+	}
+	
+	
+    p {
+      font-size: 40px;
+      color: white;
     }
     header {
-      background-color: #0078d7;
+      
+	  background-color: transparent;
       color: white;
       padding: 20px;
       text-align: center;
-    }
-    main {
-      padding: 40px;
-    }
-    footer {
-      text-align: center;
-      color: #888;
-      padding: 20px;
-      background-color: #f1f1f1;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>欢迎来到我的网页！</h1>
+    <h1>欢迎来到李永胜的网页！</h1>
   </header>
 
-  <main>
-    <h2>长城游览</h2>
+  <div class="flex-container">
+    <!-- 左侧栏：图片和文本 -->
+	<div class="left-column">
+    <h2>4.26日和朋友去八达岭长城游览</h2>
 	<img src="111.jpg" alt="长城游览" width="600">
 	<h2>关于我</h2>
-    <p>你好！我是[你的名字]，这是我自己搭建的网页。</p>
-
+    <p>你好！我是[李永胜]，这是我自己搭建的网页。如果你想和我交朋友，你可以加我的微信19139156912。
+	我是一名生物学在读研究生，将于2026年毕业了</p>
+    <p>点击这里访问我的github网站 <a href="https://github.com/yongsheng-debug/my-website" target="_blank">GitHub 页面</a>。</p>
     <h2>我的兴趣</h2>
     <ul>
       <li>编程</li>
-      <li>旅行</li>
-      <li>摄影</li>
+      <li>文学</li>
+      <li>艺术</li>
     </ul>
+	<h2>如果你喜欢文学，那么我可以给你推荐一些文学作品，</h2>
+<ul>
+  <li>当代文章
+    <ul>
+      <li>《穆斯林的葬礼》</li>
+      <li>《狼王梦》</li>
+    </ul>
+  </li>
+  <li>古代文章
+    <ul>
+      <li>《伶官传序》</li>
+      <li>《兰亭集序》</li>
+	  <li>《醉翁亭记》</li>
+    </ul>
+  </li>
+</ul>
+    </div>
+    <!-- 右侧栏：图片和文本 -->
+    <div class="right-column">
+      <h2>这是本科阶段和舍友、班主任的出行照片2023年5月</h2>
+      <img src="3.jpg" alt="右侧图片">
+      <p>我们的专业都是生物工程，我们现在都在读硕士研究生。</p>
+    </div>
+  </div>
   </main>
 
   <footer>
-    © 2025 我的名字 | 联系邮箱：yourname@example.com
+	 <p style="text-align: center;">© 2025 李永胜 | 联系邮箱：liyongshengscience@163.com</p>
   </footer>
 </body>
 </html>
